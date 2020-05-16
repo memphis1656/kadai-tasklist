@@ -1,0 +1,33 @@
+<form action="/tasks" method="post" data-remote="true">
+  
+<% if task.errors.any? %>
+<div id="error_explanation">
+  <ul>
+    <% task.errors.full_messages.each do |msg| %>
+    <li>
+      <%= msg %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+  
+  <label for="content">タスク</label>
+  <input type="text" id="content" name="task[content]">
+  <label for="status">ステータス</label>
+  <input type="text" name="task[status]" id="status">
+  
+
+
+
+  
+
+  
+
+
+
+  
+  <input type="submit" value="記録">
+
+</form>
+
